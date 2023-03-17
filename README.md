@@ -27,10 +27,10 @@ This section provides an overview of the current state of the project. It may in
 
 It organizes what different RSA implementations are available in the codebase and which ones are actively being developed or maintained.
 
-| Name | Source | Resource | Status |
-| ---- | ------ | -------- | ------ |
-| TBD  | TBD    | TBD      | TBD    |
-|      |        |          |        |
+| Name   | Source                                    | Resource                                                                                       | Status                                  |
+| ------ | ----------------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------- |
+| NetRep | [GitHub](https://github.com/ahwillia/netrep) | [Paper 1](https://arxiv.org/pdf/2110.14739.pdf)<br />[Paper 2](https://arxiv.org/pdf/2211.11665.pdf) | [🚧](https://emojipedia.org/construction/) |
+|        |                                           |                                                                                                |                                         |
 
 ### Noise Setups
 
