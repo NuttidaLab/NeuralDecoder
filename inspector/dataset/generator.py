@@ -7,7 +7,7 @@ class SyntheticNetworks():
 
     def generate(self, networks = 3):
         # seed = 42069
-        n_samples = 2048
+        n_samples = 500
         n_classes = 4  # Number of stimuli M
         n_features = 2  # Dimensionality of responses N
 

@@ -13,6 +13,8 @@ class Metric:
         self.data['y'] = y
         self.data['kwargs'] = kwargs
 
+        return "TBD ingestion report"
+
     def digest(self):
         pass
 
