@@ -80,6 +80,8 @@ class ESM(NetRep):
 
         # TO DO LATER: return a report of the preprocessing
 
+        return "TBD Digestion Report"
+
     def plot(self):
         '''Plot the RSA score'''
         plot_distmat(self.data['distance_matrix'])

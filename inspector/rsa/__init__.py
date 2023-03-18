@@ -1,3 +1,5 @@
-from .netrep import ESM
-from .netrep import GSM
-from .netrep import NetRep
+'''RSA Wrappers and implementations'''
+
+from .netrep_wrapper import ESM
+from .netrep_wrapper import GSM
+from .netrep_wrapper import NetRep
