@@ -11,6 +11,9 @@ def plot_distmat(distmat, title = "Distance Metric", out_path = None):
     number_of_networks = len(distmat[0])
     labels = [f"Network {i+1}" for i in range(number_of_networks)]
 
+    # Create a new figure
+    plt.figure()
+
     # Plot the heatmap using Seaborn
     ax = sns.heatmap(distmat, cmap='coolwarm', annot=True, fmt=".3f",
                      xticklabels=labels, yticklabels=labels, cbar_kws={'label': 'Distance'})
@@ -18,7 +21,7 @@ def plot_distmat(distmat, title = "Distance Metric", out_path = None):
 
     # if out_path is not None, save the figure to the path
     if out_path is not None:
-        ax.figure.savefig(out_path)
+        ax.figure.savefig(out_path, bbox_inches='tight')
     else:
         plt.show()
 
