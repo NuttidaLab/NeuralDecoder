@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def plot_distmat(distmat, title = "Distance Metric", size = 8):
+def plot_distmat(distmat, title = "Distance Metric", size = 8, out_path = None):
     '''Plot a distance matrix
     New method uses Seaborn to create a heatmap
     '''
@@ -11,18 +11,16 @@ def plot_distmat(distmat, title = "Distance Metric", size = 8):
     number_of_networks = len(distmat[0])
     labels = [f"Network {i+1}" for i in range(number_of_networks)]
 
-    # Create a figure and set the size
-    fig, ax = plt.subplots(figsize=(size, size))
-
     # Plot the heatmap using Seaborn
-    sns.heatmap(distmat, cmap='coolwarm', annot=True, fmt=".3f",
-                xticklabels=labels, yticklabels=labels, cbar_kws={'label': 'Distance'})
+    ax = sns.heatmap(distmat, cmap='coolwarm', annot=True, fmt=".3f",
+                     xticklabels=labels, yticklabels=labels, cbar_kws={'label': 'Distance'})
+    ax.set_title(title)
 
-    # Set the title and axis labels
-    ax.set(title=title)
-
-    # Show the plot
-    plt.show()
+    # if out_path is not None, save the figure to the path
+    if out_path is not None:
+        ax.figure.savefig(out_path)
+    else:
+        ax.show()
 
 
 def plot_distmat_old(distmat, title = "Distance Metric", size = 5):
