@@ -3,9 +3,9 @@ import numpy as np
 class Metric:
     '''Base class for all RSA metrics'''
 
-    def __init__(self):
+    def __init__(self, verbose=True):
         self.data = {}
-        self.digested_data = {}
+        self.verbose = verbose
     
     def ingest(self, X, y, **kwargs):
         
