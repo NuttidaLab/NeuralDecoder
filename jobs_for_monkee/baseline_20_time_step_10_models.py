@@ -1,4 +1,4 @@
-import os, sys; sys.path.append(os.path.abspath('../'))
+import os, sys; sys.path.append(os.path.abspath('../')); sys.path.append(os.path.abspath('./'))
 
 import scipy.io
 from inspector.rsa import ESM
