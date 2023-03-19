@@ -15,6 +15,6 @@ networks_X, networks_y = network_generator.generate(networks=10)
 netrep_metric = ESM()
 ingestion_report = netrep_metric.ingest(networks_X, networks_y)
 digestion_report = netrep_metric.digest()
-energy_distance = netrep_metric.score(verbose=True)
+energy_distance = netrep_metric.score()
 
 netrep_metric.plot()
