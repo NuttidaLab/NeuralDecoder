@@ -4,26 +4,31 @@ This folder contains Jupyter notebooks for experimentation and study purposes. I
 
 ## Logs
 
-| name                            | source                                                            | status | notes                                                            |
-| ------------------------------- | ----------------------------------------------------------------- | ------ | ---------------------------------------------------------------- |
-| netrep_workflow.ipynb           | SELF                                                              | 🚧     |                                                                  |
-| netrep_linear_metrics.ipynb     | [NetRep Repo](https://github.com/ahwillia/netrep/tree/main/examples) | ✅     | probably not so relevant to the project                          |
-| netrep_stochastic_metrics.ipynb | [NetRep Repo](https://github.com/ahwillia/netrep/tree/main/examples) | ✅     | explored - GaussianStochasticMetric and EnergyStochasticMetric |
-|                                 |                                                                   |        |                                                                  |
+| name                              | source                                                            | status | notes                                                                                 |
+| --------------------------------- | ----------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------- |
+| netrep_workflow                   | self                                                              | ✅     | All ready to go! :D                                                                   |
+| netrep_linear_metrics             | [NetRep Repo](https://github.com/ahwillia/netrep/tree/main/examples) | ✅     | probably not so relevant to the project                                               |
+| netrep_stochastic_metrics         | [NetRep Repo](https://github.com/ahwillia/netrep/tree/main/examples) | ✅     | explored - GaussianStochasticMetric and EnergyStochasticMetric                      |
+| baseline_flattened_representation | self                                                              | ✅     | Killed by Out Of Memory Killer on Monkee + Laptop. Improvements to core NetRep needed |
+| baseline_esm_per_time_step        | self                                                              | ✅     | Laptop = dead 😵                                                                      |
+| baseline_esm_per_time_step_v2     | self                                                              | ✅     | Improved; Running 20 frames 10 models (~1hr job) on Monkee                            |
+| baseline_flattened_downsampled    | self                                                              | 🚧     | ~50 frames evenly split                                                               |
+|                                   |                                                                   |        |                                                                                       |
 
 ## Things to investigate
 
-| type             | name                                 | status                                  |
-| ---------------- | ------------------------------------ | --------------------------------------- |
-| General          | RSA                                  | ✅                                      |
-| General          | Wasserstein Distance                 | 🚧 |
-| General          | Canonical Correlation Analysis (CCA) | 🚧 |
-| General          | Multi-Dimensional Scaling (MDS)      | 🚧 |
-| General          | Dynamic Time Warping (DTW)           | 🚧 |
-| General          | Frechet Distance                     | 🚧 |
-| Gradient-based   | Saliency maps                        | 🚧 |
-| Gradient-based   | Integrated Gradients                 | 🚧 |
-| Activation-based | Activation maximization              | 🚧 |
-| Activation-based | T-SNE visualization                  | 🚧 |
-| Network pruning  | Weight pruning                       | 🚧 |
-| Network pruning  | Structured pruning                   | 🚧 |
+| type             | name                                 | status |
+| ---------------- | ------------------------------------ | ------ |
+| General          | NetRep - EnergyStochasticMetric      | ✅     |
+| General          | NetRep - GaussianStochasticMetric    | 🚧     |
+| General          | Wasserstein Distance                 | 🚧     |
+| General          | Canonical Correlation Analysis (CCA) | 🚧     |
+| General          | Multi-Dimensional Scaling (MDS)      | 🚧     |
+| General          | Dynamic Time Warping (DTW)           | 🚧     |
+| General          | Frechet Distance                     | 🚧     |
+| Gradient-based   | Saliency maps                        | 🚧     |
+| Gradient-based   | Integrated Gradients                 | 🚧     |
+| Activation-based | Activation maximization              | 🚧     |
+| Activation-based | T-SNE visualization                  | 🚧     |
+| Network pruning  | Weight pruning                       | 🚧     |
+| Network pruning  | Structured pruning                   | 🚧     |
