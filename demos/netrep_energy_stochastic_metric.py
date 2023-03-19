@@ -7,7 +7,7 @@ from inspector.dataset import SyntheticNetworks
 
 # create 10 synthetic networks
 network_generator = SyntheticNetworks()
-networks_X, networks_y = network_generator.generate(networks=11)
+networks_X, networks_y = network_generator.generate(networks=10)
 
 # create an RSA object
 netrep_metric = ESM()
