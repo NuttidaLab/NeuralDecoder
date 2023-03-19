@@ -117,6 +117,6 @@ class ESM(NetRep):
         # return the report of digested networks
         return "TBD Digestion Report"
     
-    def plot(self):
+    def plot(self, title="Energy Stochastic Metric", out_path=None):
         '''Plot the RSA score'''
-        plot_distmat(self.data['distance_matrix'], title="Energy Stochastic Metric")
+        plot_distmat(self.data['distance_matrix'], title=title, out_path=out_path)
