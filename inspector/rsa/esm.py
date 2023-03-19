@@ -5,8 +5,8 @@ from inspector.utility import plot_distmat
 class ESM(NetRep):
     '''Energy Stochastic Metric'''
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, verbose = True):
+        super().__init__(verbose)
 
 
     def reshape_networks_by_class(self, X_all, Y_all, n_classes):
@@ -86,6 +86,12 @@ class ESM(NetRep):
         example shapes (Xi, Xj): ((4, 225, 2), (4, 225, 2))
         Final digested data has to be a [np.array, np.arry]
         '''
+
+        # check if the data has already been digested
+        if self.data["digested_flag"]:
+            if self.verbose: print("Data already digested, skipping digestion")
+            return "TBD Digestion Report"
+
         # get the data
         X_all = self.data['X']
         Y_all = self.data['y']
@@ -104,7 +110,10 @@ class ESM(NetRep):
         self.data['digested_networks'] = X_all_sliced
 
         if self.verbose: print(f"Successfully digested data, available in self.data['digested_networks']")
-
+        
+        # set the digested flag
+        self.data["digested_flag"] = True
+        
         # return the report of digested networks
         return "TBD Digestion Report"
     

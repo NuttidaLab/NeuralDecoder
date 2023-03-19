@@ -8,8 +8,8 @@ from netrep.multiset import pairwise_distances
 class NetRep(Metric):
     '''Base class for NetRep wrapper classes'''
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, verbose = True):
+        super().__init__(verbose)
 
     def score(self, networks = False):
         '''Compute the netrep score'''
