@@ -29,7 +29,7 @@ It organizes what different RSA implementations are available in the codebase an
 
 | Name   | Source                                    | Resource                                                                                       | Status                                  |
 | ------ | ----------------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------- |
-| NetRep | [GitHub](https://github.com/ahwillia/netrep) | [Paper 1](https://arxiv.org/pdf/2110.14739.pdf)<br />[Paper 2](https://arxiv.org/pdf/2211.11665.pdf) | [🚧](https://emojipedia.org/construction/) |
+| NetRep | [GitHub](https://github.com/ahwillia/netrep) | [Paper 1](https://arxiv.org/pdf/2110.14739.pdf)<br />[Paper 2](https://arxiv.org/pdf/2211.11665.pdf) | 🚧 |
 |        |                                           |                                                                                                |                                         |
 
 ### Noise Setups

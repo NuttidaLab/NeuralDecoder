@@ -4,26 +4,26 @@ This folder contains Jupyter notebooks for experimentation and study purposes. I
 
 ## Logs
 
-| name                            | source                                                            | status                                  | notes                                                            |
-| ------------------------------- | ----------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------------------------- |
-| netrep_workflow.ipynb           | SELF                                                              | [🚧](https://emojipedia.org/construction/) |                                                                  |
-| netrep_linear_metrics.ipynb     | [NetRep Repo](https://github.com/ahwillia/netrep/tree/main/examples) | ✅                                      | probably not so relevant to the project                          |
-| netrep_stochastic_metrics.ipynb | [NetRep Repo](https://github.com/ahwillia/netrep/tree/main/examples) | ✅                                      | explored - GaussianStochasticMetric and EnergyStochasticMetric |
-|                                 |                                                                   |                                         |                                                                  |
+| name                            | source                                                            | status | notes                                                            |
+| ------------------------------- | ----------------------------------------------------------------- | ------ | ---------------------------------------------------------------- |
+| netrep_workflow.ipynb           | SELF                                                              | 🚧     |                                                                  |
+| netrep_linear_metrics.ipynb     | [NetRep Repo](https://github.com/ahwillia/netrep/tree/main/examples) | ✅     | probably not so relevant to the project                          |
+| netrep_stochastic_metrics.ipynb | [NetRep Repo](https://github.com/ahwillia/netrep/tree/main/examples) | ✅     | explored - GaussianStochasticMetric and EnergyStochasticMetric |
+|                                 |                                                                   |        |                                                                  |
 
 ## Things to investigate
 
 | type             | name                                 | status                                  |
 | ---------------- | ------------------------------------ | --------------------------------------- |
 | General          | RSA                                  | ✅                                      |
-| General          | Wasserstein Distance                 | [🚧](https://emojipedia.org/construction/) |
-| General          | Canonical Correlation Analysis (CCA) | [🚧](https://emojipedia.org/construction/) |
-| General          | Multi-Dimensional Scaling (MDS)      | [🚧](https://emojipedia.org/construction/) |
-| General          | Dynamic Time Warping (DTW)           | [🚧](https://emojipedia.org/construction/) |
-| General          | Frechet Distance                     | [🚧](https://emojipedia.org/construction/) |
-| Gradient-based   | Saliency maps                        | [🚧](https://emojipedia.org/construction/) |
-| Gradient-based   | Integrated Gradients                 | [🚧](https://emojipedia.org/construction/) |
-| Activation-based | Activation maximization              | [🚧](https://emojipedia.org/construction/) |
-| Activation-based | T-SNE visualization                  | [🚧](https://emojipedia.org/construction/) |
-| Network pruning  | Weight pruning                       | [🚧](https://emojipedia.org/construction/) |
-| Network pruning  | Structured pruning                   | [🚧](https://emojipedia.org/construction/) |
+| General          | Wasserstein Distance                 | 🚧 |
+| General          | Canonical Correlation Analysis (CCA) | 🚧 |
+| General          | Multi-Dimensional Scaling (MDS)      | 🚧 |
+| General          | Dynamic Time Warping (DTW)           | 🚧 |
+| General          | Frechet Distance                     | 🚧 |
+| Gradient-based   | Saliency maps                        | 🚧 |
+| Gradient-based   | Integrated Gradients                 | 🚧 |
+| Activation-based | Activation maximization              | 🚧 |
+| Activation-based | T-SNE visualization                  | 🚧 |
+| Network pruning  | Weight pruning                       | 🚧 |
+| Network pruning  | Structured pruning                   | 🚧 |
