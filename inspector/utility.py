@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def plot_distmat(distmat, title = "Distance Metric", size = 8, out_path = None):
+def plot_distmat(distmat, title = "Distance Metric", out_path = None):
     '''Plot a distance matrix
     New method uses Seaborn to create a heatmap
     '''
@@ -20,7 +20,7 @@ def plot_distmat(distmat, title = "Distance Metric", size = 8, out_path = None):
     if out_path is not None:
         ax.figure.savefig(out_path)
     else:
-        ax.show()
+        plt.show()
 
 
 def plot_distmat_old(distmat, title = "Distance Metric", size = 5):
