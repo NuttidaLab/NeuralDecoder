@@ -7,11 +7,15 @@ class Metric:
         self.data = {}
         self.verbose = verbose
     
-    def ingest(self, X, y, **kwargs):
+    def ingest(self, X, y, preprcessed = False):
         
         self.data['X'] = X
         self.data['y'] = y
-        self.data['kwargs'] = kwargs
+        self.data['digested_flag'] = False
+
+        if preprcessed:
+            self.data['digested_networks'] = X
+            self.data['digested_flag'] = True
 
         return "TBD ingestion report"
 
@@ -26,5 +30,4 @@ class Metric:
 
     def report(self):
         '''Report the the metric's parameters and results statistics'''
-
         pass
