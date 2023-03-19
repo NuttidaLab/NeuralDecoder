@@ -6,7 +6,7 @@ from inspector.rsa import ESM
 from tqdm import tqdm
 import numpy as np
 
-data_dir = os.path.abspath(r'..\data\baseline')
+data_dir = os.path.abspath(r'../data/baseline')
 data_files = [os.path.join(data_dir, f) for f in os.listdir(data_dir) if f.endswith('.mat')]
 
 n_networks = 10
