@@ -9,9 +9,9 @@ class ESM(NetRep):
         super().__init__(verbose)
 
 
-    def reshape_networks_by_class(self, X_all, Y_all, n_classes):
+    def reshape_networks_by_class(self, X_all, Y_all, classes):
         '''Returns list of Networks in shape [(class, sample, feature), (class, sample, feature), ...]'''
-
+        
         X_all_by_class = []
         Y_all_by_class = []
 
@@ -22,8 +22,8 @@ class ESM(NetRep):
             Y = Y_all[i]
 
             # split the network by class
-            X_by_class = [X[Y==i] for i in range(n_classes)]
-            Y_by_class = [Y[Y==i] for i in range(n_classes)]
+            X_by_class = [X[Y==label] for label in classes]
+            Y_by_class = [Y[Y==label] for label in classes]
 
             # append the network to the list of networks
             X_all_by_class.append(X_by_class)
@@ -95,10 +95,10 @@ class ESM(NetRep):
         # get the data
         X_all = self.data['X']
         Y_all = self.data['y']
-        n_classes = len(np.unique(Y_all[0]))
+        classes = np.unique(Y_all[0])
 
         # reshape the networks by class
-        X_all_by_class, Y_all_by_class = self.reshape_networks_by_class(X_all, Y_all, n_classes)
+        X_all_by_class, Y_all_by_class = self.reshape_networks_by_class(X_all, Y_all, classes)
 
         # get the minimum number of samples per class
         n_min_samples = self.get_min_samples_per_class(X_all_by_class)
