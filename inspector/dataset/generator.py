@@ -5,12 +5,8 @@ class SyntheticNetworks():
     def __init__(self) -> None:
         pass
 
-    def generate(self, networks = 3):
+    def generate(self, networks = 3, n_samples = 500, n_classes = 4, n_features = 2):
         # seed = 42069
-        n_samples = 500
-        n_classes = 4  # Number of stimuli M
-        n_features = 2  # Dimensionality of responses N
-
         # rng = np.random.default_rng(seed)
 
         X , y = [], []
