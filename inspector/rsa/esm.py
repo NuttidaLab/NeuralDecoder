@@ -1,6 +1,7 @@
 from inspector.rsa.netrep_wrapper import NetRep
 import numpy as np
 from inspector.utility import plot_distmat
+from netrep.metrics.stochastic import EnergyStochasticMetric
 
 class ESM(NetRep):
     '''Energy Stochastic Metric'''
@@ -116,6 +117,10 @@ class ESM(NetRep):
         
         # return the report of digested networks
         return "TBD Digestion Report"
+    
+    def score(self):
+        metric = EnergyStochasticMetric()
+        return super().score(metric)
     
     def plot(self, title="Energy Stochastic Metric", out_path=None):
         '''Plot the RSA score'''
