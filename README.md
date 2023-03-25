@@ -10,27 +10,29 @@ The `notebooks` folder in the repository contains Jupyter notebooks for experime
 
 More, TBD...
 
-## Requirements and Usage
+## Requirements
 
 To run this code, you will need:
 
 - `Python 3.7` or higher
-- `cuda` installed
+- Good amount of `memory`
 
 You can install these dependencies using `pip install -r requirements.txt`.
 
-## Current status
+## Usage
 
-This section provides an overview of the current state of the project. It may include information on ongoing work, upcoming features, or bug fixes.
+Data Ingestion shapes (Undigested) 👉 X (Models x Samples x Features), Y (Models x Samples)
+
+> Post-digestion shapes differ for every method. It is recommended to ingest data in undigested format and let digestion pipeline handle it automatically
 
 ### RSA Implementations
 
 It organizes what different RSA implementations are available in the codebase and which ones are actively being developed or maintained.
 
-| Name   | Source                                    | Resource                                                                                       | Status                                  |
-| ------ | ----------------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------- |
-| NetRep | [GitHub](https://github.com/ahwillia/netrep) | [Paper 1](https://arxiv.org/pdf/2110.14739.pdf)<br />[Paper 2](https://arxiv.org/pdf/2211.11665.pdf) | 🚧 |
-|        |                                           |                                                                                                |                                         |
+| Name   | Source                                    | Resource                                                                                       | Status |
+| ------ | ----------------------------------------- | ---------------------------------------------------------------------------------------------- | ------ |
+| NetRep | [GitHub](https://github.com/ahwillia/netrep) | [Paper 1](https://arxiv.org/pdf/2110.14739.pdf)<br />[Paper 2](https://arxiv.org/pdf/2211.11665.pdf) | 🚧     |
+|        |                                           |                                                                                                |        |
 
 ### Noise Setups
 
