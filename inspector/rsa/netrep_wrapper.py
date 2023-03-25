@@ -1,6 +1,6 @@
 
-from inspector import Metric
-from inspector.utility import plot_distmat
+from ..metric import Metric
+from ..utility import plot_distmat
 from netrep.multiset import pairwise_distances
 
 class NetRep(Metric):
