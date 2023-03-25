@@ -2,9 +2,9 @@ from typing import Tuple
 import numpy.typing as npt
 import numpy as np
 
-from inspector.rsa.netrep_wrapper import NetRep
+from .netrep_wrapper import NetRep
+from ..utility import plot_distmat
 import numpy as np
-from inspector.utility import plot_distmat
 
 from netrep.metrics.stochastic import GaussianStochasticMetric
 

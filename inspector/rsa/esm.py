@@ -1,6 +1,6 @@
-from inspector.rsa.netrep_wrapper import NetRep
+from .netrep_wrapper import NetRep
 import numpy as np
-from inspector.utility import plot_distmat
+from ..utility import plot_distmat
 from netrep.metrics.stochastic import EnergyStochasticMetric
 
 class ESM(NetRep):
