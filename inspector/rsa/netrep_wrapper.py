@@ -4,13 +4,13 @@ from ..utility import plot_distmat
 from netrep.multiset import pairwise_distances
 
 class NetRep(Metric):
-    '''Base class for NetRep wrapper classes'''
+    """Base class for NetRep wrapper classes"""
 
     def __init__(self, verbose = True):
         super().__init__(verbose)
 
     def score(self, metric, networks = False):
-        '''Compute the netrep score'''
+        """Compute the netrep score"""
         if not networks: networks = self.data['digested_networks']
         distmat_energy = pairwise_distances(metric, networks, verbose=self.verbose)
 
@@ -19,6 +19,6 @@ class NetRep(Metric):
         return distmat_energy
 
     def plot(self):
-        '''Plot the RSA score'''
+        """Plot the RSA score"""
         plot_distmat(self.data['distance_matrix'], title="Distance Metric")
     

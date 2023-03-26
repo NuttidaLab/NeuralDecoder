@@ -4,14 +4,14 @@ from ..utility import plot_distmat
 from netrep.metrics.stochastic import EnergyStochasticMetric
 
 class ESM(NetRep):
-    '''Energy Stochastic Metric'''
+    """Energy Stochastic Metric"""
 
     def __init__(self, verbose = True):
         super().__init__(verbose)
 
 
     def reshape_networks_by_class(self, X_all, Y_all, classes):
-        '''Returns list of Networks in shape [(class, sample, feature), (class, sample, feature), ...]'''
+        """Returns list of Networks in shape [(class, sample, feature), (class, sample, feature), ...]"""
         
         X_all_by_class = []
         Y_all_by_class = []
@@ -34,7 +34,7 @@ class ESM(NetRep):
         return X_all_by_class, Y_all_by_class
 
     def get_min_samples_per_class(self, X_all_by_class):
-        '''Works accross all networks and returns the minimum number of samples per class'''
+        """Works accross all networks and returns the minimum number of samples per class"""
 
         minimum_samples_per_class = float('inf')
 
@@ -60,7 +60,7 @@ class ESM(NetRep):
     
     
     def slice_by_samples(self, X_all_by_class, n_min_samples):
-        '''Returns a list of networks in shape np.array([(class, n_minsamples, feature), (class, n_minsamples, feature), ...])'''
+        """Returns a list of networks in shape np.array([(class, n_minsamples, feature), (class, n_minsamples, feature), ...])"""
 
         X_all_sliced = []
 
@@ -82,11 +82,11 @@ class ESM(NetRep):
         return X_all_sliced
 
     def digest(self):
-        '''Preprocess data for RSA analysis
+        """Preprocess data for RSA analysis
         They are segrigated by class (by using ground truth y), then by sample, then by feature
         example shapes (Xi, Xj): ((4, 225, 2), (4, 225, 2))
         Final digested data has to be a [np.array, np.arry]
-        '''
+        """
 
         # check if the data has already been digested
         if self.data["digested_flag"]:
@@ -118,10 +118,8 @@ class ESM(NetRep):
         # return the report of digested networks
         return "TBD Digestion Report"
     
-    def score(self):
-        metric = EnergyStochasticMetric()
-        return super().score(metric)
+    def score(self, metric = None): return super().score(EnergyStochasticMetric())
     
     def plot(self, title="Energy Stochastic Metric", out_path=None):
-        '''Plot the RSA score'''
+        """Plot the RSA score"""
         plot_distmat(self.data['distance_matrix'], title=title, out_path=out_path)

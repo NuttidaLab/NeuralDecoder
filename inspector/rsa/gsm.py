@@ -20,7 +20,9 @@ class GSM(NetRep):
         covs = np.stack([np.cov(X[y==labels].T) for labels in classes], 0) # Meaning: compute the covariance of each class
         return means, covs
 
-    def digest(self):
+    def digest(self, downsample=4):
+        """For the moment, downsamples to 75 timesteps due to a limitation in the netrep package
+        """
 
         # check if the data has already been digested
         if self.data["digested_flag"]:
@@ -29,6 +31,8 @@ class GSM(NetRep):
 
         X_all = self.data['X']
         Y_all = self.data['y']
+
+        X_all = X_all[:, :, ::downsample]
 
         self.data['digested_networks'] = []
 
@@ -44,10 +48,8 @@ class GSM(NetRep):
         # return the report of digested networks
         return "TBD Digestion Report"
 
-    def score(self):
-        metric = GaussianStochasticMetric(1)
-        return super().score(metric)
+    def score(self, metric = None): return super().score(GaussianStochasticMetric(1))
     
     def plot(self, title="Gaussian Stochastic Metric", out_path=None):
-        '''Plot the RSA score'''
+        """Plot the RSA score"""
         plot_distmat(self.data['distance_matrix'], title=title, out_path=out_path)
