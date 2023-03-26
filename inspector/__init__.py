@@ -11,3 +11,4 @@ These techniques can be used to measure and visualize the similarity structure o
 """
 
 from .metric import Metric
+from .model_by_model import ModelByModel

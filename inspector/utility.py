@@ -1,11 +1,26 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+from pathlib import Path
+
+
+def export_distmat(distmat, out_dir, title, annot = True, format = "eps", color_map_hex = 'coolwarm'):
+    """ Export a distance matrix to a file
+    """
+    fig = plt.figure()
+    ax = sns.heatmap(distmat, cmap=color_map_hex, annot=annot, fmt=".2f")
+    ax.set_title(title)
+
+    Path(out_dir).mkdir(parents=True, exist_ok=True)
+    location = os.path.join(os.path.abspath(out_dir), f'{title}.{format}')
+
+    plt.savefig(location, format=format)
 
 def plot_distmat(distmat, title = "Distance Metric", out_path = None):
-    '''Plot a distance matrix
+    """Plot a distance matrix
     New method uses Seaborn to create a heatmap
-    '''
+    """
 
     # Set the x and y ticks to the labels
     number_of_networks = len(distmat[0])
@@ -27,9 +42,9 @@ def plot_distmat(distmat, title = "Distance Metric", out_path = None):
 
 
 def plot_distmat_old(distmat, title = "Distance Metric", size = 5):
-    '''Plot a distance matrix
+    """Plot a distance matrix
     Uses only matplotlib, felt like it did not look as good and hard to control
-    '''
+    """
 
     # Create a figure and a 3D Axes
     fig, ax = plt.subplots(1, 1, figsize=(size, size))
