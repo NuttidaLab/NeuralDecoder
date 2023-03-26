@@ -1,7 +1,7 @@
 import numpy as np
 
 class Metric:
-    '''Base class for all RSA metrics'''
+    """Base class for all RSA metrics"""
 
     def __init__(self, verbose=True):
         self.data = {}
@@ -29,5 +29,5 @@ class Metric:
         pass
 
     def report(self):
-        '''Report the the metric's parameters and results statistics'''
+        """Report the the metric's parameters and results statistics"""
         pass
