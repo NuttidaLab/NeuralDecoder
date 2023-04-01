@@ -1,8 +1,6 @@
 from .rsa import GSM, ESM, Classical
 from .utility import export_distmat
 import tqdm
-import numpy as np
-from matplotlib.colors import LinearSegmentedColormap
 
 class ModelByModel:
 
@@ -104,28 +102,34 @@ class ModelByModel:
         
         return self.distances
     
-    def export(self, out_dir = r"out", format = r"eps", normalize = True, color_map_hex = []):
+    # def export(self, out_dir = r"out", format = r"eps", normalize = True, color_map_hex = []):
         
-        if normalize:
-            self.distances = [result / np.max(result) for result in self.distances]
+    #     if normalize:
+    #         self.distances = [result / np.max(result) for result in self.distances]
 
-        if color_map_hex:
-            boundaries = [0.0, 1.0]
-            hex_colors = color_map_hex
-            colors=list(zip(boundaries, hex_colors))
-            custom_color_map = LinearSegmentedColormap.from_list(
-                name='custom_navy',
-                colors=colors,
-            )
-            cmap = custom_color_map
-        else:
-            cmap = 'coolwarm'
+    #     if color_map_hex:
+    #         boundaries = [0.0, 1.0]
+    #         hex_colors = color_map_hex
+    #         colors=list(zip(boundaries, hex_colors))
+    #         custom_color_map = LinearSegmentedColormap.from_list(
+    #             name='custom_navy',
+    #             colors=colors,
+    #         )
+    #         cmap = custom_color_map
+    #     else:
+    #         cmap = 'coolwarm'
+
+    #     for i, metric in enumerate(self.metric):
+    #         export_distmat(self.distances[i], out_dir, metric, annot = True, format = format, color_map_hex = cmap)
+
+    #     if self.verbose: print(f"Exported {len(self.metric)} metrics to {out_dir}.")
+
+    def export(self, out_dir = r"out", format = r"eps", normalize = True, color_map_hex = []):
 
         for i, metric in enumerate(self.metric):
-            export_distmat(self.distances[i], out_dir, metric, annot = True, format = format, color_map_hex = cmap)
+            export_distmat(self.distances[i], out_dir, metric, normalize = normalize, annot = True, format = format, color_map_hex = color_map_hex)
 
         if self.verbose: print(f"Exported {len(self.metric)} metrics to {out_dir}.")
-
 
 
 
