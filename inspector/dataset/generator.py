@@ -26,4 +26,4 @@ class SyntheticNetworks():
             X.append(_X)
             y.append(_y)
 
-        return X, y
+        return np.array(X), np.array(y)

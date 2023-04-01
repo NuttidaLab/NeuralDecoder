@@ -3,19 +3,47 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 from pathlib import Path
+from matplotlib.colors import LinearSegmentedColormap
 
-
-def export_distmat(distmat, out_dir, title, annot = True, format = "eps", color_map_hex = 'coolwarm'):
+def export_distmat(distmat, out_dir, title, normalize = True, annot = True, format = "eps", color_map_hex = []):
     """ Export a distance matrix to a file
     """
+
+    if normalize:
+        distmat = [result / np.max(result) for result in distmat]
+
+    if color_map_hex:
+        boundaries = [0.0, 1.0]
+        hex_colors = color_map_hex
+        colors=list(zip(boundaries, hex_colors))
+        custom_color_map = LinearSegmentedColormap.from_list(
+            name='custom_navy',
+            colors=colors,
+        )
+        cmap = custom_color_map
+    else:
+        cmap = 'coolwarm'
+
     fig = plt.figure()
-    ax = sns.heatmap(distmat, cmap=color_map_hex, annot=annot, fmt=".2f")
+    ax = sns.heatmap(distmat, cmap=cmap, annot=annot, fmt=".2f")
     ax.set_title(title)
 
     Path(out_dir).mkdir(parents=True, exist_ok=True)
     location = os.path.join(os.path.abspath(out_dir), f'{title}.{format}')
 
     plt.savefig(location, format=format)
+
+# def export_distmat(distmat, out_dir, title, annot = True, format = "eps", color_map_hex = 'coolwarm'):
+#     """ Export a distance matrix to a file
+#     """
+#     fig = plt.figure()
+#     ax = sns.heatmap(distmat, cmap=color_map_hex, annot=annot, fmt=".2f")
+#     ax.set_title(title)
+
+#     Path(out_dir).mkdir(parents=True, exist_ok=True)
+#     location = os.path.join(os.path.abspath(out_dir), f'{title}.{format}')
+
+#     plt.savefig(location, format=format)
 
 def plot_distmat(distmat, title = "Distance Metric", out_path = None):
     """Plot a distance matrix
