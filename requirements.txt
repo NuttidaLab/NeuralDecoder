@@ -35,3 +35,6 @@ threadpoolctl==3.1.0
 traitlets==5.9.0
 wcwidth==0.2.6
 zipp==3.15.0
+furo==2022.12.07
+myst-parser==0.18.1
+Sphinx==5.3.0
