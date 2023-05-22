@@ -3,3 +3,7 @@
 # ignore entire data folder
 data/
 build/
+
+# ignore all the ipynb files
+*.ipynb
+*.ipynb_checkpoints/
