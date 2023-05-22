@@ -1,6 +1,6 @@
 from ..dataset_parent import RepKitDataset
 
-import scipy
+from scipy import io
 import numpy as np
 
 class flow(RepKitDataset):
@@ -17,7 +17,7 @@ class flow(RepKitDataset):
         return len(self.paths)
 
     def __getitem__(self, idx):
-        data = scipy.io.loadmat(self.paths[idx])
+        data = io.loadmat(self.paths[idx])
         x = data['test_x']
         x = x.reshape(-1, x.shape[-2], x.shape[-1])
         y = self._make_labels(data['test_out'])

@@ -6,33 +6,8 @@ from tqdm import tqdm
 class Classical:
     """https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.pdist.html"""
 
-    supported = [
-        'braycurtis',
-        'canberra',
-        'chebyshev',
-        'cityblock',
-        'correlation',
-        'cosine',
-        'dice',
-        'euclidean',
-        'hamming',
-        'jaccard',
-        'jensenshannon',
-        'kulczynski1',
-        'mahalanobis',
-        'matching',
-        'minkowski',
-        'rogerstanimoto',
-        'russellrao',
-        'seuclidean',
-        'sokalmichener',
-        'sokalsneath',
-        'sqeuclidean',
-        'yule'
-    ]
-
     def __init__(self) -> None:
-        super().__init__()
+        pass
 
     def measure(self, data, metric: str):
 
