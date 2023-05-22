@@ -1,4 +1,4 @@
-from ..decomposer import mds
+from ..decomposer import mds, pca
 
 class RepKitSpace:
 
@@ -7,7 +7,8 @@ class RepKitSpace:
     decomposer = None
     distances = None
     available_engines = {
-        'mds': mds
+        'mds': mds,
+        'pca': pca
     }
 
     def __init__(self) -> None:
@@ -20,6 +21,6 @@ class RepKitSpace:
         self.metric.plot()
         return self
 
-    def plot_embedding(self, labels = None, title = "MDS", label_prefix = "MDS"):
-        self.decomposer.plot(labels = labels, title = title, label_prefix = label_prefix)
+    def plot_embedding(self, labels = None):
+        self.decomposer.plot(labels = labels)
         return self
