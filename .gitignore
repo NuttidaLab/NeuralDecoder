@@ -4,10 +4,5 @@
 data/
 build/
 
-# ignore all the ipynb files
-*.ipynb
-*.ipynb_checkpoints/
-
 # ignore everything in notebooks folder except readme.md
-notebooks/*
-!notebooks/readme.md
+*.mat
