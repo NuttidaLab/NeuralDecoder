@@ -2,6 +2,7 @@
 from matplotlib import pyplot as plt
 import seaborn as sns
 
+
 class RepKitMetric:
     
     distances = None
@@ -29,3 +30,16 @@ class RepKitMetric:
             spine.set_visible(True)
         
         plt.plot()
+
+    def ensure_supported(self, metric):
+        """Checks if a metric is supported by the class.
+
+        Args:
+            metric (str): The name of the metric to be checked.
+
+        Raises:
+            ValueError: If the metric is not supported.
+        """
+
+        if metric not in self.registered_metrics.keys(): raise ValueError(f"REPKIT ERROR: Unsupported metric: {metric}")
+        else: return self.registered_metrics[metric]

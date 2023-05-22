@@ -4,11 +4,11 @@ from ..metric import model_metric
 class model_space(RepKitSpace):
 
     def __init__(self) -> None:
+        self.metric = model_metric()
         super().__init__()
 
     def measure(self, data, metric):
         self.dataset = data
-        self.metric = model_metric()
         self.metric.measure(data, metric)
         return self
     
