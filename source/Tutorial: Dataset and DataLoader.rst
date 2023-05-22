@@ -1,13 +1,13 @@
-Tutorial: Loading and Inspecting Networks with RepKit
+Basic: Datasets And DataLoaders
 =====================================================
 
 In this tutorial, we will demonstrate how to use RepKit to load and inspect a set of networks. We will use the RepKit `rnn` module to load a set of networks from a directory, and then inspect the shape of each network in the set.
 
-Before we get started, make sure you have RepKit installed. You can install it using pip:
+Understanding RepKitDataset
+---------------------------
 
-.. code-block:: bash
+All datasets used in RepKit are a child of the `RepKitDatasetClass` which inturn is a child of `torch.utils.data.Dataset`.
 
-   pip install RepKit
 
 Importing the necessary modules
 -------------------------------
