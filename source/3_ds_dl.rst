@@ -7,6 +7,7 @@ Making our own dataset
 -----------------------
 
 .. code-block:: python
+
    class samples(RepKitDataset):
       def __init__(self, file_path: str, preprocess: str = None) -> None:
 
@@ -47,6 +48,7 @@ Now that we have our own dataset, we can manipulate it in the same way we did be
 In addition, we can chain multiple datasets to create subsets of datasets. For example:
 
 .. code-block:: python
+
    from RepKit.dataset import rnn
    dataset = samples("n1.mat", preprocess="slice")
    xt, _ = dataset[0]
