@@ -15,7 +15,15 @@ class RepKitSpace:
         pass
 
     def measure(self, data, metric):
-        raise NotImplementedError
+        self.dataset = data
+        self.metric.measure(data, metric)
+        return self
+    
+    def decompose(self, engine, components):
+        self.decomposer = self.available_engines[engine]()
+        self.decomposer.metric = self.metric
+        self.decomposer.decompose(components = components)
+        return self
     
     def plot_distance(self):
         self.metric.plot()
