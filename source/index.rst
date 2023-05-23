@@ -55,6 +55,11 @@ esm                        netrep_esm
 gsm                        netrep_gsm
 =========================  =========================================
 
+`Note:`
+
+- The modelwise_classical metrics are the same as the samplewise_classical metrics but averaged over samples.
+- The :code:`netrep_esm` and :code:`netrep_gsm` metrics are only available for modelwise measurements.
+
 Supported Decomposers:
 ========================
 =========================  ========================================= 
@@ -65,9 +70,6 @@ PCA                        `PCA <https://scikit-learn.org/stable/modules/generat
 =========================  =========================================
 
 
-Note:
------
-- The modelwise_classical metrics are the same as the samplewise_classical metrics but averaged over samples.
 
 Indices and tables
 ==================
