@@ -17,11 +17,11 @@ class RepKitMetric:
     def plot(self, title = None):
         ax = sns.heatmap(self.distances, 
                          cmap='Blues_r', 
-                         annot=False, 
+                         annot=True, 
                          fmt=".2f", 
                          square=True, 
                          cbar=True, 
-                         cbar_kws={"shrink": .8})
+                         cbar_kws={"shrink": 1})
 
         if title is None: title = self.metric_name
         ax.set_title(title)

@@ -5,11 +5,11 @@ import numpy as np
 
 class flow(RepKitDataset):
     def __init__(self, data_dir: str, n_networks: int = None, preprocess: str = None) -> None:
-        self.paths = self._crawl_dir(data_dir, n_networks)
         # preprocess:
         #     avg_neurons 
         #     avg_time_facing (avg neurons and time facing)
         #     alex
+        self.paths = self.crawl_dir(data_dir, n_networks)
         self.preprocess = preprocess
 
 
