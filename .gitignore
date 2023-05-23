@@ -6,3 +6,6 @@ build/
 
 # ignore everything in notebooks folder except readme.md
 *.mat
+
+source/_autosummary/*
+.vscode/*
