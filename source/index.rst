@@ -4,24 +4,23 @@
 Welcome to RepKit's documentation!
 ==================================
 
-.. autosummary::
-   :toctree: _autosummary
-   :recursive:
-   :caption: Components:
-
-   RepKit.dataset
-   RepKit.metric
-   RepKit.decomposer
-   RepKit.space
-
 .. toctree::
    :maxdepth: 10
    :caption: Tutorials:
 
-   Installation
-   Tutorial: Dataset and DataLoader
-   Tutorial: Model Space
+   1_installation
+   2_basic
+   3_ds_dl
+   4_metric
+   5_spaces
+   test
 
+.. autosummary::
+   :toctree: _autosummary
+   :recursive:
+   :caption: API Reference:
+
+   RepKit
 
 
 Indices and tables

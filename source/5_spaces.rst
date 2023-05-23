@@ -1,5 +1,5 @@
-Basic: Measuring Model Similarity and Visualizing Model Space with RepKit
-============================================================================
+5: Spaces
+=========
 
 In this tutorial, we will demonstrate how to use RepKit to measure the similarity between a set of networks and visualize their model space. We will use the `model_space` module from the `RepKit.space` package to measure the pairwise cosine similarity between the networks and visualize their 2D embedding using multidimensional scaling.
 

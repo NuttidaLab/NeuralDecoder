@@ -1,5 +1,5 @@
-Basic: Datasets And DataLoaders
-=====================================================
+2: Basic Usage and API
+======================
 
 In this tutorial, we will demonstrate how to use RepKit to load and inspect a set of networks. We will use the RepKit `rnn` module to load a set of networks from a directory, and then inspect the shape of each network in the set.
 

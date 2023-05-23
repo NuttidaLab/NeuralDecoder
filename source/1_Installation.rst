@@ -1,5 +1,5 @@
-Installation
-==================
+1: Installation
+===============
 
 Before we get started, make sure you have RepKit installed. You can install it using pip:
 

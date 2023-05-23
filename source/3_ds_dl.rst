@@ -1,5 +1,5 @@
-Customized Datasets And DataLoaders
-===============================
+3: Datasets And DataLoaders
+===========================
 
 Now that we have seen how to load a dataset, we can make our own dataset. In this example, we will make a dataset that loads networks from a directory and then slices the data.
 
