@@ -2,7 +2,7 @@ import itertools
 import numpy as np
 from tqdm import tqdm
 from sklearn.utils.validation import check_array, check_random_state
-from netrep.utils import align
+from .utils import align
 
 
 def euclidean_tangent_space(Xs, Xbar, group="orth"):

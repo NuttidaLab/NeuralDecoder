@@ -10,8 +10,8 @@ from sklearn.base import BaseEstimator
 from sklearn.utils.validation import check_is_fitted
 from tqdm import tqdm
 
-from netrep.validation import check_equal_shapes
-from netrep.utils import angular_distance
+from ..validation import check_equal_shapes
+from ..utils import angular_distance
 
 class PermutationMetric(BaseEstimator):
     """Computes distance between two sets of optimally permutation-aligned representations.

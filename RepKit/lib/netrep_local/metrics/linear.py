@@ -9,8 +9,8 @@ from sklearn.utils.validation import check_is_fitted
 from sklearn.base import BaseEstimator
 from tqdm import tqdm
 
-from netrep.utils import whiten, angular_distance
-from netrep.validation import check_equal_shapes
+from ..utils import whiten, angular_distance
+from ..validation import check_equal_shapes
 
 class LinearMetric(BaseEstimator):
     """Computes distance between two sets of optimally linearly aligned representations.

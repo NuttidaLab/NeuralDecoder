@@ -1,9 +1,8 @@
 from sklearn.base import TransformerMixin, BaseEstimator
 from sklearn.utils.validation import check_random_state, check_is_fitted
 
-from netrep.utils import rand_orth
+from .utils import rand_orth
 import numpy as np
-
 
 class RBFOrthoSampler(TransformerMixin, BaseEstimator):
 

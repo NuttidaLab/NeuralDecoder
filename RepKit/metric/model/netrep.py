@@ -1,8 +1,8 @@
 import numpy as np
 
-from ...lib.netrep.metrics.stochastic import GaussianStochasticMetric
-from ...lib.netrep.metrics.stochastic import EnergyStochasticMetric
-from ...lib.netrep.multiset import pairwise_distances
+from ...lib.netrep_local.metrics.stochastic import GaussianStochasticMetric
+from ...lib.netrep_local.metrics.stochastic import EnergyStochasticMetric
+from ...lib.netrep_local.multiset import pairwise_distances
 
 class GSM:
 

@@ -8,7 +8,7 @@ import numpy.typing as npt
 from sklearn.utils.validation import check_random_state
 from tqdm import tqdm
 
-from netrep.utils import align, sq_bures_metric, rand_orth
+from ..utils import align, sq_bures_metric, rand_orth
 
 
 class GaussianStochasticMetric:

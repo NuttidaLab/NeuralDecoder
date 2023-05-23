@@ -1,6 +1,6 @@
 import numpy as np
 import itertools
-from netrep.validation import check_equal_shapes
+from .validation import check_equal_shapes
 from tqdm import tqdm
 
 
