@@ -9,3 +9,6 @@ build/
 
 source/_autosummary/*
 .vscode/*
+
+# ignore all files
+*.ipynb
