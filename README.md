@@ -1,5 +1,6 @@
 # 🧠RepKit: Represntational Analysis Toolkit
 
+[Link to documentation](https://nuttidalab.github.io/NeuralDecoder/)
 
 ## Citation
 
