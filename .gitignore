@@ -12,3 +12,4 @@ source/_autosummary/*
 
 # ignore all files
 *.ipynb
+*.pkl
