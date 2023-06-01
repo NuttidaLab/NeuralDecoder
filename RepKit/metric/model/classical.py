@@ -23,8 +23,19 @@ class Classical:
             # Average samplewise distance for networks i and j
             samplewise_dists = []
             for id_sample in range(len(nx_i)):
-                samplewise_dists.append(pdist(np.stack([nx_i[id_sample], nx_j[id_sample]]), metric=metric))
-            distances[i, j] = np.mean(samplewise_dists)
+                t_dist = pdist(np.stack([nx_i[id_sample], nx_j[id_sample]]), metric=metric)
+                samplewise_dists.append(t_dist)
+            
+            # drop all NaNs from samplewise_dists
+            samplewise_dists = np.array(samplewise_dists)
+            samplewise_dists = samplewise_dists[~np.isnan(samplewise_dists)]
+
+            # Check if Samplewise_dists is empty
+            if len(samplewise_dists) == 0:
+                distances[i, j] = np.nan # If empty, setting distance to nan, but what to do ideally?
+            else:
+                distances[i, j] = np.mean(samplewise_dists)
+        
         distances += distances.T
         
         # return the distance matrix
