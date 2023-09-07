@@ -16,7 +16,7 @@ python setup.py install
 
 * RepKit.dataset: Loads and processes the data. Has helpful predefined templates.
 * RepKit.space: Manipulates the dataset. Supports Model and Sample spaces.
-  * RepKit.space.measure: Contains a collection of measures to quantify the latent semantic features of a space.
+  * RepKit.space.measure: Contains a collection of measures - `space.metric.registered_metrics`
   * RepKit.space.decompose: Reduces the dimensionality and visualizes the spaces.
 
 ## Simple Example
