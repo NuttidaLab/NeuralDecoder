@@ -17,7 +17,7 @@ class RepKitMetric:
     def plot(self, title = None):
         ax = sns.heatmap(self.distances, 
                          cmap='Blues_r', 
-                         annot=True, 
+                         annot=False, 
                          fmt=".2f", 
                          square=True, 
                          cbar=True, 

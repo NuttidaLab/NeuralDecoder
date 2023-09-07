@@ -12,7 +12,7 @@ class mds(RepKitDecomposer):
     def decompose(self, components,  distances = None):
         if distances is None:
             distances = self.metric.distances
-        self.engine = sklearn_MDS(n_components=components, metric=True, dissimilarity='precomputed')
+        self.engine = sklearn_MDS(n_components=components, metric=True, dissimilarity='precomputed', normalized_stress="auto")
         self.embedding = self.engine.fit_transform(distances)
         return self
     

@@ -11,6 +11,6 @@ Or you can install it from source:
 
 .. code-block:: bash
 
-    git clone @RepKitLink
+    git clone https://github.com/NuttidaLab/NeuralDecoder.git
     cd RepKit
     python setup.py install
