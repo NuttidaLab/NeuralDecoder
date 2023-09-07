@@ -18,7 +18,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.11.3',
     install_requires=[
         # list your dependencies here, read from requirements.txt
         line.strip() for line in open('requirements.txt')
