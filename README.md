@@ -19,6 +19,27 @@ python setup.py install
   * RepKit.space.measure: Contains a collection of measures to quantify the latent semantic features of a space.
   * RepKit.space.decompose: Reduces the dimensionality and visualizes the spaces.
 
+## Simple Example
+
+```python
+# Making x (200 samples, 300 features) and y (200 labels)
+import numpy as np
+x = np.random.rand(200, 300)
+y = np.random.randint(2, size=200)
+
+# The rnn package has got useful functions (one of which is register)
+from RepKit.dataset.rnn import register
+dataset = register(x, y)
+
+# As our data is in sample space, we will import sample_space to manipulate it
+from RepKit.space import sample_space
+space = sample_space()
+
+# We can then measure and reduce its dimensionality
+space.measure(dataset, "cosine").plot_distance()
+space.decompose(components=2, engine="mds").plot_embedding(labels=y)
+```
+
 ## Citation
 
 If you use this code or data for your own research, please cite our paper as follows:
