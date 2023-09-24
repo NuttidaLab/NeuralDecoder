@@ -1,6 +1,6 @@
 # 🧠RepKit: Represntational Analysis Toolkit
 
-[![Documentation](https://img.shields.io/badge/api-documentation-blue.svg)](https://nuttidalab.github.io/NeuralDecoder/) ![Documentation](https://img.shields.io/badge/python-3.11.3-blue.svg) [![CodeFactor](https://www.codefactor.io/repository/github/nuttidalab/neuraldecoder/badge)](https://www.codefactor.io/repository/github/nuttidalab/neuraldecoder)
+[![Documentation](https://img.shields.io/badge/api-documentation-blue.svg)](https://nuttidalab.github.io/NeuralDecoder/) ![Documentation](https://img.shields.io/badge/python-3.11-blue.svg) [![CodeFactor](https://www.codefactor.io/repository/github/nuttidalab/neuraldecoder/badge)](https://www.codefactor.io/repository/github/nuttidalab/neuraldecoder)
 
 This repository contains a collection of tools to measure, visualize, and, analyze representational similarities and latent semantic features. The tools are designed to be modular and flexible, allowing for easy integration into existing research/projects.
 
