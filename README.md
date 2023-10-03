@@ -1,4 +1,4 @@
-# 🧠RepKit: Represntational Analysis Toolkit
+# 🧠RepKit: Representational Analysis Toolkit
 
 [![Documentation](https://img.shields.io/badge/api-documentation-blue.svg)](https://nuttidalab.github.io/NeuralDecoder/) ![Documentation](https://img.shields.io/badge/python-3.11-blue.svg) [![CodeFactor](https://www.codefactor.io/repository/github/nuttidalab/neuraldecoder/badge)](https://www.codefactor.io/repository/github/nuttidalab/neuraldecoder)
 
